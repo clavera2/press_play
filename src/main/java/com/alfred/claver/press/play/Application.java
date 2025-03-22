@@ -1,10 +1,11 @@
 package com.alfred.claver.press.play;
 
+import java.util.List;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import java.util.List;
 
 @RestController
 @SpringBootApplication
@@ -16,6 +17,6 @@ public class Application {
 
 	@RequestMapping("/")
 	List<String> home() {
-		return List.of("fabiana","kensho", "amin","richard");
+		return List.of("");
 	}
 }
