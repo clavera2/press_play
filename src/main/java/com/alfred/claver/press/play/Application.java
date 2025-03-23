@@ -4,8 +4,10 @@ import java.util.List;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.alfred.claver.press.play.Person.Student;
 
 @RestController
 @SpringBootApplication
@@ -15,8 +17,8 @@ public class Application {
 		SpringApplication.run(Application.class, args);
 	}
 
-	@RequestMapping("/")
-	List<String> home() {
-		return List.of("");
+	@GetMapping("/")
+	List<Student> home() {
+		return List.of(null, null, null);
 	}
 }
