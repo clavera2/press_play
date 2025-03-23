@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.alfred.claver.press.play.entities.Student;
+import com.alfred.claver.press.play.entities.Subscriber;
 
 @RestController
 @SpringBootApplication
@@ -18,7 +18,7 @@ public class Application {
 	}
 
 	@GetMapping("/")
-	List<Student> home() {
+	List<Subscriber> home() {
 		return List.of(null, null, null);
 	}
 }
