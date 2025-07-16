@@ -2,15 +2,20 @@ package com.alfred.claver.press.play.entities;
 import java.io.Serializable;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
-@Entity
+@Entity(name="Subscribers")
 public class Subscriber implements Serializable {
     @Id
-    String username;
-    String email;
-    List<String> subscribed_to;
+    private String username;
+    private String email;
+    @JsonProperty("subscribed_to")
+    private List<String> subscribed_to;
+
+    public Subscriber() {}
 
     public Subscriber(String username, String email, List<String> sub_to) {
         this.username = username;
